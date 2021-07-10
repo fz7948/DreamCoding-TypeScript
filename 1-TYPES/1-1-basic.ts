@@ -1,8 +1,8 @@
 {
   // JavaScript
   // old: var 👎
-  var age = 5;
-  age = 1;
+  //   var age = 5;
+  //   age = 1;
 
   // let es6
   let name = "hello";
@@ -10,7 +10,7 @@
 
   // const
   const age = 5;
-  age = 5; // error
+  //   age = 5;  error
 }
 
 {
@@ -21,8 +21,8 @@
    */
 
   // number
-  const num: number = "d"; // error
-  const num: number = 0;
+  //   const num: number = "d";  error
+  //   const num: number = 0;
 
   // string
   const str: string = "hello";
@@ -33,7 +33,7 @@
   // undefined
   // 값이 있는지 없는지 결정되지 않은 상태
   let name: undefined; // 👎
-  name = "hello"; //error
+  //   name = "hello"; error
   let age: number | undefined; // 👍
   age = undefined;
   age = 1;
@@ -47,7 +47,7 @@
   // 값이 없는지 명확하게 나타내줌
   let person: null; // 👎
   person = null;
-  persom = 1; //error
+  //   persom = 1; error
   let person2: string | null; // 👍
 
   // unknown 👎
@@ -75,17 +75,15 @@
   // 에러핸들링 시에 에러가 발생하면 리턴을 하지 않는 상태
   function throwError(message: string): never {
     // message -> sever (log)
-    (1) throw new Error(message); // 에러를 던짐
-    (2) while (true) {} // 계속 끝나지 않도록 만듬
+    throw new Error(message); // 에러를 던짐 (1)
+    //while (true) {} // 계속 끝나지 않도록 만듬 (2)
   }
-  let neverEnding: never // 👎
+  let neverEnding: never; // 👎
 
-  // object  
-  let obj: object // 👎
+  // object
+  let obj: object; // 👎
   // 원시 타입을 제외한 모든 object 타입을 할당할 수 있다 (배열도 가능)
-  function acceptSomeObject(obj: object) {
-
-  }
-  acceptSomeObject({name: 'ellie'})
-  acceptSomeObject({animal: 'dog'})
+  function acceptSomeObject(obj: object) {}
+  acceptSomeObject({ name: "ellie" });
+  acceptSomeObject({ animal: "dog" });
 }
