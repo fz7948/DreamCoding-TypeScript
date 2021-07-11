@@ -1,9 +1,9 @@
 /**
  * Let's make a game 🕹
  */
-type Direction = "up" | "down" | "left" | "right";
+type Direction2 = "up" | "down" | "left" | "right";
 const position = { x: 0, y: 0 };
-function move(direction: Direction) {
+function move2(direction: Direction2) {
   switch (direction) {
     case "up":
       position.y += 1;
@@ -22,11 +22,11 @@ function move(direction: Direction) {
   }
 }
 console.log(position); // { x: 0, y: 0}
-move("up");
+move2("up");
 console.log(position); // { x: 0, y: 1}
-move("down");
+move2("down");
 console.log(position); // { x: 0, y: 0}
-move("left");
+move2("left");
 console.log(position); // { x: -1, y: 0}
-move("right");
+move2("right");
 console.log(position); // { x: 0, y: 0}
